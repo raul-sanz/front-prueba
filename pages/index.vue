@@ -20,7 +20,7 @@ export default {
   asyncData({ params }) {
     return axios
       .get(
-        `http://newsapi.org/v2/everything?q=apple&from=2020-09-15&pageSize=11&to=2020-10-15&sortBy=popularity&apiKey=d6736e08a3ac4859aeda69469b97d4cc`
+        `https://newsapi.org/v2/everything?q=apple&from=2020-09-15&pageSize=11&to=2020-10-15&sortBy=popularity&apiKey=d6736e08a3ac4859aeda69469b97d4cc`
       )
       .then((res) => {
         console.log(res.data)
