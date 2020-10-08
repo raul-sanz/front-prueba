@@ -17,19 +17,14 @@ import Card from '@/components/Card';
 import axios from "axios";
 export default {
   components:{'Card':Card},
-  data(){
-    return{
-      data:{}
-    }
-  },
-  created( ) {
+  asyncData({ params }) {
     return axios
       .get(
         `https://newsapi.org/v2/everything?q=apple&from=2020-09-15&pageSize=11&to=2020-10-15&sortBy=popularity&apiKey=d6736e08a3ac4859aeda69469b97d4cc`
       )
       .then((res) => {
-        
-          this.data=res.data.articles
+        console.log(res.data)
+        return { data: res.data.articles };
       });
   },
 };

@@ -1,12 +1,12 @@
 <template>
   <div class="lg:px-20 px-10 pt-2 mt-12 rounded-xl bg-gray-100">
     <div>
-      <button
+      <nuxt-link to="/"><button
         @click="$router.push('/')"
         class="py-2 px-6 bg-red-600 text-white rounded-full mb-4"
       >
         volver
-      </button>
+      </button></nuxt-link>
     </div>
     <div class="bg-white rounded-lg p-2 shadow-lg">
       <div
